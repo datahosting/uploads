@@ -34,11 +34,11 @@
         a(document).ready(function() {
             if ("item" != _WidgetManager._GetAllData().blog.pageType && (d = a("a.blog-pager-older-link").attr("href"))) {
                 var c =
-                    a('<a href="javascript:;" >B?M VÀO ÐÂY Ð? T?I THÊM</a>');
+                    a('<a href="javascript:;" >Táº£i thÃªm bÃ i viáº¿t</a>');
                 c.click(h);
-                var e = a('<img src="https://raw.github.com/techirsh/infinite-scroll-css-styles/master/images/fb-style-loader.gif" style="display: none;">');
+                var e = a('<img src="http://3.bp.blogspot.com/-AZyqKh-riBI/Uvm8rXjpFQI/AAAAAAAABsg/KG87IcAZzso/s1600/fb-style-loader-namkna.gif" style="display: none;">');
                 f.scroll(k);
-                b = a('<div class="techirshloader"></div>');
+                b = a('<div class="button medium"></div>');
                 b.append(c);
                 b.append(e);
                 b.insertBefore(a("#blog-pager"));
