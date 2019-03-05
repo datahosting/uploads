@@ -145,7 +145,8 @@ $(document).ready(function () {initMenu();});
             a("#blog-pager").hide()
         }
     })
-})
+
+})(jQuery);
 
 	
 	
