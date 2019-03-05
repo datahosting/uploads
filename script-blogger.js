@@ -1,37 +1,36 @@
-document.addEventListener(&quot;DOMContentLoaded&quot;, function(){
-    var body = document.querySelector(&#39;body&#39;),
-        menuOpen = document.querySelector(&#39;.menu-open&#39;),
-        menuList = document.querySelector(&#39;.menu-list&#39;),
-        menuOpacity = document.querySelector(&#39;.menu-opacity&#39;),
-        searchOpen = document.querySelector(&#39;.search-open&#39;),
-        searchClose = document.querySelector(&#39;.search-close&#39;),
-        searchForm = document.querySelector(&#39;.search-form&#39;),
-        searchOpacity = document.querySelector(&#39;.search-opacity&#39;);
-  searchOpen.onclick = function(){
-      searchForm.classList.add(&#39;search-form-block&#39;);
-      searchOpacity.classList.add(&#39;search-opacity-block&#39;);
-      body.classList.add(&#39;body-overflow&#39;);
-    }
-    searchClose.onclick = function(){
-      searchForm.classList.remove(&#39;search-form-block&#39;);
-      searchOpacity.classList.remove(&#39;search-opacity-block&#39;);
-      body.classList.remove(&#39;body-overflow&#39;);
-    }
-    searchOpacity.onclick = function(){
-      searchForm.classList.remove(&#39;search-form-block&#39;);
-      searchOpacity.classList.remove(&#39;search-opacity-block&#39;);
-      body.classList.remove(&#39;body-overflow&#39;);
-    } 
-    menuOpen.onclick = function(){
-      menuList.classList.add(&#39;menu-list-block&#39;);
-      menuOpacity.classList.add(&#39;menu-opacity-block&#39;);
-      body.classList.add(&#39;body-overflow&#39;);
-    }
-    menuOpacity.onclick = function(){
-      menuList.classList.remove(&#39;menu-list-block&#39;);
-      menuOpacity.classList.remove(&#39;menu-opacity-block&#39;);
-      body.classList.remove(&#39;body-overflow&#39;);
-    }
-    
+document.addEventListener("DOMContentLoaded", function(){
+				var body = document.querySelector('body'),
+					menuOpen = document.querySelector('.menu-open'),
+					menuList = document.querySelector('.menu-list'),
+					menuOpacity = document.querySelector('.menu-opacity'),
+					searchOpen = document.querySelector('.search-open'),
+					searchClose = document.querySelector('.search-close'),
+					searchForm = document.querySelector('.search-form'),
+					searchOpacity = document.querySelector('.search-opacity');
+				menuOpen.onclick = function(){
+					menuList.classList.add('menu-list-block');
+					menuOpacity.classList.add('menu-opacity-block');
+					body.classList.add('body-overflow');
+				}
+				menuOpacity.onclick = function(){
+					menuList.classList.remove('menu-list-block');
+					menuOpacity.classList.remove('menu-opacity-block');
+					body.classList.remove('body-overflow');
+				}
+				searchOpen.onclick = function(){
+					searchForm.classList.add('search-form-block');
+					searchOpacity.classList.add('search-opacity-block');
+					body.classList.add('body-overflow');
+				}
+				searchClose.onclick = function(){
+					searchForm.classList.remove('search-form-block');
+					searchOpacity.classList.remove('search-opacity-block');
+					body.classList.remove('body-overflow');
+				}
+				searchOpacity.onclick = function(){
+					searchForm.classList.remove('search-form-block');
+					searchOpacity.classList.remove('search-opacity-block');
+					body.classList.remove('body-overflow');
+				}	
 
-  }, false)
+			}, false)
