@@ -1,44 +1,44 @@
 document.addEventListener("DOMContentLoaded", function(){
-				var body = document.querySelector('body'),
-					menuOpen = document.querySelector('.menu-open'),
-					menuList = document.querySelector('.menu-list'),
-					menuOpacity = document.querySelector('.menu-opacity'),
-					searchOpen = document.querySelector('.search-open'),
-					searchClose = document.querySelector('.search-close'),
-					searchForm = document.querySelector('.search-form'),
-					searchOpacity = document.querySelector('.search-opacity');
-				menuOpen.onclick = function(){
-					menuList.classList.add('menu-list-block');
-					menuOpacity.classList.add('menu-opacity-block');
-					body.classList.add('body-overflow');
-				}
-				menuOpacity.onclick = function(){
-					menuList.classList.remove('menu-list-block');
-					menuOpacity.classList.remove('menu-opacity-block');
-					body.classList.remove('body-overflow');
-				}
-				searchOpen.onclick = function(){
-					searchForm.classList.add('search-form-block');
-					searchOpacity.classList.add('search-opacity-block');
-					body.classList.add('body-overflow');
-				}
-				searchClose.onclick = function(){
-					searchForm.classList.remove('search-form-block');
-					searchOpacity.classList.remove('search-opacity-block');
-					body.classList.remove('body-overflow');
-				}
-				searchOpacity.onclick = function(){
-					searchForm.classList.remove('search-form-block');
-					searchOpacity.classList.remove('search-opacity-block');
-					body.classList.remove('body-overflow');
-				}	
+                var body = document.querySelector('body'),
+                    menuOpen = document.querySelector('.menu-open'),
+                    menuList = document.querySelector('.menu-list'),
+                    menuOpacity = document.querySelector('.menu-opacity'),
+                    searchOpen = document.querySelector('.search-open'),
+                    searchClose = document.querySelector('.search-close'),
+                    searchForm = document.querySelector('.search-form'),
+                    searchOpacity = document.querySelector('.search-opacity');
+                menuOpen.onclick = function(){
+                    menuList.classList.add('menu-list-block');
+                    menuOpacity.classList.add('menu-opacity-block');
+                    body.classList.add('body-overflow');
+                }
+                menuOpacity.onclick = function(){
+                    menuList.classList.remove('menu-list-block');
+                    menuOpacity.classList.remove('menu-opacity-block');
+                    body.classList.remove('body-overflow');
+                }
+                searchOpen.onclick = function(){
+                    searchForm.classList.add('search-form-block');
+                    searchOpacity.classList.add('search-opacity-block');
+                    body.classList.add('body-overflow');
+                }
+                searchClose.onclick = function(){
+                    searchForm.classList.remove('search-form-block');
+                    searchOpacity.classList.remove('search-opacity-block');
+                    body.classList.remove('body-overflow');
+                }
+                searchOpacity.onclick = function(){
+                    searchForm.classList.remove('search-form-block');
+                    searchOpacity.classList.remove('search-opacity-block');
+                    body.classList.remove('body-overflow');
+                }   
 
-	//Menu
+    //Menu
 $(document)['ready'](function(xm) {
     var x1 = -1,
         x2 = '',
         x3 = '';
-    xm('#menu')['find']('ul')['find']('li')['each'](function() {
+    xm('.menu')['find']('ul')['find']('li')['each'](function() {
         for (var x4 = xm(this)['text'](), x5 = xm(this)['find']('a')['attr']('href'), xm0 = 0, x6 = 0; x6 < x4['length'] && (xm0 = x4['indexOf']('_', xm0), -1 != xm0); x6++) {
             xm0++
         };
@@ -57,7 +57,7 @@ $(document)['ready'](function(xm) {
     for (var xm0 = 0; x1 >= xm0; xm0++) {
         x2 += '</ul>', x3 += '</ul>', 0 != xm0 && (x2 += '</li>', x3 += '</li>')
     };
-    xm('#menu .LinkList')['html'](x3), xm('#menu > .LinkList > ul')['attr']('id', 'nav'),  xm('#menu ul > li > ul')['parent']('li')['addClass']('parent'), xm('#menu .widget')['attr']('style', 'display:block!important;')
+    xm('.menu .LinkList')['html'](x3), xm('.menu > .LinkList > ul')['attr']('id', 'nav'),  xm('.menu ul > li > ul')['parent']('li')['addClass']('parent'), xm('.menu .widget')['attr']('style', 'display:block!important;')
 });
 
 
@@ -148,8 +148,8 @@ $(document).ready(function () {initMenu();});
 
 })(jQuery);
 
-	
-	
-	
-	
-			}, false)
+    
+    
+    
+    
+            }, false)
