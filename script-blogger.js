@@ -34,30 +34,30 @@ document.addEventListener("DOMContentLoaded", function(){
 				}	
 
 	//Menu
-$(document)['ready'](function(so_1) {
-    var so_3 = -1,
-        so_7 = '',
-        so_8 = '';
-    so_1('#menu')['find']('ul')['find']('li')['each'](function() {
-        for (var so_9 = so_1(this)['text'](), x7 = so_1(this)['find']('a')['attr']('href'), so_10 = 0, x9 = 0; x9 < so_9['length'] && (so_10 = so_9['indexOf']('_', so_10), -1 != so_10); x9++) {
-            so_10++
+$(document)['ready'](function(xm) {
+    var x1 = -1,
+        x2 = '',
+        x3 = '';
+    xm('#menu')['find']('ul')['find']('li')['each'](function() {
+        for (var x4 = xm(this)['text'](), x5 = xm(this)['find']('a')['attr']('href'), xm0 = 0, x6 = 0; x6 < x4['length'] && (xm0 = x4['indexOf']('_', xm0), -1 != xm0); x6++) {
+            xm0++
         };
-        if (level = x9, level > so_3 && (so_7 += '<ul>', so_8 += '<ul>'), level < so_3) {
-            offset = so_3 - level;
-            for (var x9 = 0; x9 < offset; x9++) {
-                so_7 += '</ul></li>', so_8 += '</ul></li>'
+        if (level = x6, level > x1 && (x2 += '<ul>', x3 += '<ul>'), level < x1) {
+            offset = x1 - level;
+            for (var x6 = 0; x6 < offset; x6++) {
+                x2 += '</ul></li>', x3 += '</ul></li>'
             }
         };
-        so_9 = so_9['replace'](/_/gi, ''), so_7 += '<li><a href=\'' + x7 + '\'>' + so_9 + '</a>', so_8 += '<li><a href=\'' + x7 + '\'>';
-        for (var x9 = 0; x9 < level; x9++) {
-            so_8 += ''
+        x4 = x4['replace'](/_/gi, ''), x2 += '<li><a href=\'' + x5 + '\'>' + x4 + '</a>', x3 += '<li><a href=\'' + x5 + '\'>';
+        for (var x6 = 0; x6 < level; x6++) {
+            x3 += ''
         };
-        so_8 += so_9 + '</a>', so_3 = level
+        x3 += x4 + '</a>', x1 = level
     });
-    for (var so_10 = 0; so_3 >= so_10; so_10++) {
-        so_7 += '</ul>', so_8 += '</ul>', 0 != so_10 && (so_7 += '</li>', so_8 += '</li>')
+    for (var xm0 = 0; x1 >= xm0; xm0++) {
+        x2 += '</ul>', x3 += '</ul>', 0 != xm0 && (x2 += '</li>', x3 += '</li>')
     };
-    so_1('#menu .LinkList')['html'](so_8), so_1('#menu > .LinkList > ul')['attr']('id', 'nav'),  so_1('#menu ul > li > ul')['parent']('li')['addClass']('parent'), so_1('#menu .widget')['attr']('style', 'display:block!important;')
+    xm('#menu .LinkList')['html'](x3), xm('#menu > .LinkList > ul')['attr']('id', 'nav'),  xm('#menu ul > li > ul')['parent']('li')['addClass']('parent'), xm('#menu .widget')['attr']('style', 'display:block!important;')
 });
 
 
