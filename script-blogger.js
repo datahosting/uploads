@@ -71,14 +71,14 @@ $(document)['ready'](function(xm) {
    function () {
        var checkElement = $(this).next();
        if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-           $(this).removeClass("hiactive");
+           $(this).removeClass("menu-active");
            $('#nav ul:visible').slideToggle('normal');
 
            return false;
        }
        if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
            removeActiveClassFromAll();
-          $(this).addClass("hiactive");
+          $(this).addClass("menu-active");
            $('#nav ul:visible').slideToggle('normal');
            checkElement.slideToggle('normal');
            return false;
@@ -90,7 +90,7 @@ $(document)['ready'](function(xm) {
 
 function removeActiveClassFromAll() {
     $('#nav li a').each(function (index) {
-        $(this).removeClass("hiactive");
+        $(this).removeClass("menu-active");
     });
 }
 $(document).ready(function () {initMenu();});
